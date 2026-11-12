@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Política de privacidad de la aplicación ArtuDesk para Android.">
+    <title>Política de privacidad - ArtuDesk</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+        h1 { color: #1e293b; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+        h2 { color: #0f172a; margin-top: 30px; }
+        p, li { color: #475569; }
+        code { overflow-wrap: anywhere; }
+    </style>
+</head>
+<body>
+    <h1>Política de privacidad de ArtuDesk</h1>
+    <p><strong>Última actualización:</strong> 11 de noviembre de 2026</p>
+    <p>Esta política explica cómo la aplicación móvil <strong>ArtuDesk</strong> (paquete <code>com.cajami.artudesk</code>) trata la información cuando se utiliza para compartir y controlar una pantalla entre un dispositivo Android y una computadora Windows.</p>
+
+    <h2>1. Información que trata la aplicación</h2>
+    <p>ArtuDesk no requiere crear una cuenta y no solicita nombre, correo electrónico, contactos ni ubicación. No incluye publicidad ni herramientas de analítica.</p>
+    <ul>
+        <li><strong>Datos temporales de conexión:</strong> al iniciar una sesión se genera una clave aleatoria. La aplicación utiliza Firebase Realtime Database para intercambiar temporalmente esa clave, el estado de la sesión y los datos técnicos de negociación necesarios para conectar los dispositivos. La aplicación solicita borrar esos datos cuando termina o falla la sesión; si el dispositivo no tiene conexión, la eliminación puede no completarse de inmediato.</li>
+        <li><strong>Pantalla compartida:</strong> solo después de que el usuario inicia la acción y acepta el permiso de captura de Android, ArtuDesk transmite la imagen de la pantalla al equipo que se conecta. El contenido de pantalla no se guarda en los servidores de señalización de ArtuDesk.</li>
+        <li><strong>Control remoto:</strong> durante una sesión, la computadora conectada puede enviar acciones de toque y texto para controlar el dispositivo. El servicio de accesibilidad de ArtuDesk se utiliza para aplicar esas acciones; no procesa campos identificados como contraseñas.</li>
+        <li><strong>Datos de red:</strong> WebRTC y el servicio público STUN de Google se utilizan para establecer la conexión entre dispositivos. La negociación puede incluir información técnica de red, como direcciones IP, necesaria para conectarlos.</li>
+        <li><strong>Diagnósticos:</strong> la aplicación puede guardar en el almacenamiento privado del dispositivo un registro técnico local de etapas y errores, sin guardar el texto de los errores ni el contenido escrito. No se envía automáticamente ese registro al desarrollador.</li>
+    </ul>
+
+    <h2>2. Cómo se transmite la información</h2>
+    <p>La base de datos de Firebase se usa para señalización y coordinación de la sesión, no para almacenar las imágenes de pantalla. Una vez establecida, la conexión WebRTC transmite la pantalla y las acciones directamente entre los dispositivos mediante transporte cifrado. Google puede tratar datos técnicos de conexión al prestar Firebase y STUN, conforme a sus propias políticas de privacidad.</p>
+
+    <h2>3. Permisos</h2>
+    <ul>
+        <li><strong>Captura de pantalla:</strong> Android solicita autorización cada vez que se inicia una sesión de compartir pantalla.</li>
+        <li><strong>Accesibilidad:</strong> el usuario debe activar el servicio de ArtuDesk en los ajustes de Android para recibir y ejecutar acciones remotas de toque y texto. El servicio se utiliza para las funciones de control descritas aquí.</li>
+        <li><strong>Red y notificaciones:</strong> el acceso a Internet y al estado de la red permite conectar los dispositivos; las notificaciones informan de una sesión activa.</li>
+    </ul>
+    <p>El usuario puede detener la sesión desde ArtuDesk o desde Android y desactivar el servicio de accesibilidad en los ajustes del sistema.</p>
+
+    <h2>4. Conservación y eliminación</h2>
+    <p>ArtuDesk no mantiene una cuenta ni un historial de sesiones en un servidor propio. Los datos de señalización se solicitan eliminar al finalizar la sesión. Los diagnósticos permanecen en el almacenamiento privado del dispositivo y pueden eliminarse borrando los datos de la aplicación o desinstalándola. Los proveedores de infraestructura pueden conservar registros técnicos conforme a sus propias políticas.</p>
+
+    <h2>5. Menores de edad</h2>
+    <p>ArtuDesk es una herramienta de acceso remoto que requiere que el usuario inicie y autorice la captura de pantalla y habilite el control remoto. No está dirigida a menores de 13 años.</p>
+
+    <h2>6. Cambios a esta política</h2>
+    <p>Esta política puede actualizarse cuando cambien la aplicación o sus prácticas de datos. La fecha de actualización se indicará al inicio de esta página.</p>
+
+    <h2>7. Contacto</h2>
+    <p>Para consultas sobre privacidad, escribe a <a href="mailto:javier2315@gmail.com">javier2315@gmail.com</a>.</p>
+</body>
+</html>
