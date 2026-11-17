@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Política de privacidad de ArtuDesk para Windows distribuido por Microsoft Store.">
+  <title>Política de privacidad de ArtuDesk para Windows</title>
+  <style>
+    :root { color-scheme: light; --ink: #172033; --muted: #53627a; --blue: #165dce; --line: #dce5f2; --paper: #fff; --wash: #f3f7fd; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--wash); color: var(--ink); font: 16px/1.7 "Segoe UI", Arial, sans-serif; }
+    main { width: min(900px, calc(100% - 32px)); margin: 42px auto; padding: clamp(24px, 5vw, 56px); background: var(--paper); border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 18px 50px #0b1f4610; }
+    .eyebrow { margin: 0 0 8px; color: var(--blue); font-size: .82rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; letter-spacing: -.04em; }
+    .updated { margin: 18px 0 28px; color: var(--muted); }
+    .intro, .notice { padding: 18px 20px; border-radius: 12px; background: #eef5ff; }
+    .notice { margin: 22px 0; border-left: 4px solid var(--blue); }
+    h2 { margin: 34px 0 10px; font-size: 1.25rem; line-height: 1.35; }
+    p { margin: 10px 0; }
+    ul { padding-left: 1.35rem; }
+    li { margin: 8px 0; }
+    a { color: #0b57bd; }
+    code { padding: .1em .35em; border-radius: 4px; background: #f0f3f8; overflow-wrap: anywhere; }
+    footer { margin-top: 38px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
+    @media (max-width: 560px) { main { margin: 16px auto; padding: 24px 20px; border-radius: 14px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">ArtuDesk · Microsoft Store</p>
+    <h1>Política de privacidad para Windows</h1>
+    <p class="updated"><strong>Última actualización:</strong> 17 de noviembre de 2026</p>
+
+    <p class="intro">Esta política describe el tratamiento de información en la versión de escritorio de ArtuDesk para Windows distribuida mediante Microsoft Store. ArtuDesk permite compartir y controlar una pantalla entre participantes que aceptan una sesión de asistencia remota.</p>
+
+    <h2>1. Responsable y contacto</h2>
+    <p>ArtuDesk es publicado por JavierSoft. Para consultas de privacidad, solicitudes relacionadas con tus datos o preguntas sobre esta política, escribe a <a href="mailto:javier2315@gmail.com">javier2315@gmail.com</a>.</p>
+
+    <h2>2. Información que trata ArtuDesk</h2>
+    <p>ArtuDesk no requiere crear una cuenta y no incluye publicidad ni herramientas de analítica. La aplicación no solicita contactos ni ubicación precisa. Para prestar la función de asistencia remota trata estas categorías de información:</p>
+    <ul>
+      <li><strong>Datos temporales de señalización:</strong> un código aleatorio de sesión, su hora de creación y mensajes de negociación WebRTC (oferta y respuesta SDP). La negociación puede contener datos técnicos de red, incluidas direcciones IP y candidatos de conexión.</li>
+      <li><strong>Contenido de pantalla:</strong> después de que la persona anfitriona aprueba la solicitud y elige un monitor, ArtuDesk transmite en directo la imagen de ese monitor al otro participante. La pantalla puede mostrar información personal o confidencial que el usuario haya abierto.</li>
+      <li><strong>Acciones de control remoto:</strong> después de la aprobación, ArtuDesk transmite acciones de mouse y teclado para controlar el equipo anfitrión. El texto introducido mediante el control remoto lo recibe la aplicación que esté activa en ese equipo.</li>
+      <li><strong>Diagnósticos locales:</strong> Windows puede guardar la fecha y etapa de un error, su tipo, código HRESULT y traza técnica en <code>%LOCALAPPDATA%\ArtuDesk\diagnostico.log</code>. El archivo puede rotar a <code>diagnostico.log.previous</code> al superar el límite interno. La aplicación no envía estos diagnósticos automáticamente al desarrollador.</li>
+    </ul>
+    <p>ArtuDesk no graba sesiones ni conserva archivos de vídeo de la pantalla. No guarda el texto escrito, las imágenes capturadas, el código de sesión, la señalización SDP ni las direcciones de red en sus diagnósticos.</p>
+
+    <h2>3. Cómo se usa y transmite la información</h2>
+    <p>Firebase Realtime Database se usa para localizar la sesión e intercambiar temporalmente el código y la señalización necesaria para establecer la conexión. El tráfico de señalización se envía mediante HTTPS. ArtuDesk no solicita iniciar sesión en una cuenta de ArtuDesk; quien tenga el código puede intentar participar en la negociación, y la persona anfitriona debe aprobar el acceso antes de que comience la captura y el control.</p>
+    <p>Una vez establecida la sesión, WebRTC transmite la pantalla y las acciones de control entre los dos dispositivos con transporte cifrado. Se utiliza el servicio STUN público de Google para ayudar a establecer la conexión de red. Google puede tratar información técnica necesaria para prestar Firebase y STUN, conforme a sus propias políticas de privacidad. El otro participante recibe la pantalla compartida y las acciones de control durante la sesión.</p>
+    <p>ArtuDesk para Windows también puede conectarse con ArtuDesk para Android. En ese caso, el usuario de Android inicia la captura y debe aceptar el permiso de captura del sistema; para recibir acciones remotas debe habilitar el servicio de accesibilidad de ArtuDesk en Android. Windows recibe la pantalla de Android y puede enviar las acciones de control autorizadas.</p>
+
+    <h2>4. Conservación y eliminación</h2>
+    <p>Al establecerse la conexión, ArtuDesk solicita borrar de Firebase la oferta y la respuesta de señalización. Al cerrar normalmente la sesión, solicita borrar el registro de sesión. Si la aplicación se cierra de forma abrupta o no hay conexión, una solicitud de borrado puede fallar. El servicio no tiene configurada una limpieza automática por antigüedad; por ello, un registro abandonado puede permanecer hasta que se elimine desde el servicio.</p>
+    <p>Los diagnósticos permanecen en el almacenamiento local de Windows hasta que se eliminen manualmente o se desinstale la aplicación. Puedes borrarlos desde <code>%LOCALAPPDATA%\ArtuDesk</code>. Los proveedores de infraestructura pueden conservar registros técnicos conforme a sus propias políticas.</p>
+
+    <h2>5. Consentimiento y controles</h2>
+    <ul>
+      <li>La persona anfitriona puede aceptar o rechazar cada solicitud de acceso.</li>
+      <li>La captura comienza después de la aprobación y se limita al monitor seleccionado por el anfitrión.</li>
+      <li>El anfitrión o el participante remoto puede finalizar la conexión. En las sesiones que incluyen ArtuDesk para Windows, la conexión se termina al llegar al límite de cuatro horas desde la aprobación.</li>
+      <li>Antes de compartir, cierra ventanas con información que no quieras mostrar y comparte el código únicamente con la persona invitada. No uses la aplicación para exponer datos que no quieras transmitir al otro participante.</li>
+    </ul>
+
+    <h2>6. Seguridad y servicios externos</h2>
+    <p>La señalización se comunica con Firebase mediante HTTPS y la conexión WebRTC cifra el transporte entre dispositivos. El código de sesión sirve para localizar la negociación y no equivale a una cuenta autenticada. Mantén el código privado y verifica la solicitud antes de aceptarla. Firebase y STUN son servicios externos sujetos a sus propias condiciones y políticas de privacidad.</p>
+
+    <h2>7. Solicitudes y cambios</h2>
+    <p>Como ArtuDesk no mantiene cuentas ni un historial de sesiones para consulta, los registros temporales de señalización pueden no estar disponibles después de cerrar la sesión. Para realizar una consulta o solicitud sobre información asociada a ArtuDesk, escribe a <a href="mailto:javier2315@gmail.com">javier2315@gmail.com</a>. Esta política se actualizará cuando cambien las funciones, los proveedores o las prácticas de tratamiento de datos.</p>
+
+    <footer>ArtuDesk para Windows · Publicado por JavierSoft · Contacto: <a href="mailto:javier2315@gmail.com">javier2315@gmail.com</a></footer>
+  </main>
+</body>
+</html>
